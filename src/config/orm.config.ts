@@ -5,9 +5,7 @@ import { SchoolEntities } from "../school/school.module";
 import { AuthEntities } from "../auth/auth.module";
 
 function flatEntities(...args: any[]) {
-    return args.reduce((acc, val) => {
-        return [...acc, ...val];
-    }, []);
+    return args.reduce((acc, val) => [...acc, ...val], []);
 }
 
 export default registerAs(
